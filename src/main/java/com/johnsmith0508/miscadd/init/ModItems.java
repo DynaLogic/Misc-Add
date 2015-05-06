@@ -27,7 +27,6 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class ModItems
 {
     public static final Item testItem = new ItemMA();
-
     public static void init()
     {
         GameRegistry.registerItem(testItem, ItemMA.getName());

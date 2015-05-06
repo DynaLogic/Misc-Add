@@ -27,11 +27,7 @@
 :assemble
 :check UP-TO-DATE
 :build
-:ideaModule
-:ideaProject
-:ideaWorkspace
-:idea
 
 BUILD SUCCESSFUL
 
-Total time: 1 mins 4.568 secs
+Total time: 48.503 secs

@@ -15,24 +15,17 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.johnsmith0508.miscadd.init;
-
-import com.johnsmith0508.miscadd.block.BlockClearGlass;
-import com.johnsmith0508.miscadd.block.BlockMA;
-import net.minecraft.block.Block;
-import net.minecraftforge.fml.common.registry.GameRegistry;
+package com.johnsmith0508.miscadd.block;
 
 /**
- * Created by JohnSmith0508 on 4/5/15 at 6:21 PM.
+ * Created by JohnSmith0508 on 6/5/15 at 5:52 PM.
  */
-public class ModBlocks
+public class BlockClearGlass extends BlockMA
 {
-    public static Block testBlock = new BlockMA();
-    public static final Block clearGlass = new BlockClearGlass();
 
-    public static void init()
+    public BlockClearGlass()
     {
-        GameRegistry.registerBlock(testBlock,"Test_Block");
-        GameRegistry.registerBlock(clearGlass,"ClearGlass");
+        super();
+        this.setUnlocalizedName("ClearGlass");
     }
 }
