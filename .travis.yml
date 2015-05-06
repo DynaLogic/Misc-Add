@@ -1,10 +1,10 @@
 language: java
-install: gradle assemble
-script:
+install: 
+  - gradle assemble
   - gradle setupciworkspace
+script:
   - gradle build
   - gradle check
-  - ls build/lib
 notifications:
   email:
     recipients: loganwaldman@gmail.com
