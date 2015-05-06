@@ -3,8 +3,10 @@ package com.johnsmith0508.miscadd;
 import com.johnsmith0508.miscadd.init.ModBlocks;
 import com.johnsmith0508.miscadd.init.ModItems;
 import com.johnsmith0508.miscadd.init.RenderItems;
+import com.johnsmith0508.miscadd.proxy.IProxy;
 import com.johnsmith0508.miscadd.reference.Ref;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -15,6 +17,9 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @Mod(version = Ref.VERSION, modid = Ref.MOD_ID, name = Ref.MOD_NAME)
 public class MiscAdd
 {
+    @SidedProxy(clientSide = Ref.CLIENT_PROXY_CLASS, serverSide = Ref.SERVER_PROXY_CLASS)
+    public static IProxy proxy;
+
     @Mod.Instance(Ref.MOD_ID)
     public static MiscAdd instance;
 
