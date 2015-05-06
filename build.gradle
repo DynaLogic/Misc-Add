@@ -31,7 +31,6 @@ minecraft {
     replaceIn "reference/Ref.java"
     replace "@MAJOR@", config.version.mod.major
     replace "@MINOR@", config.version.mod.minor
-    ant.replace(file:"README.md",token: "@VERSION@",value:"${modVersion})
     
     // the mappings can be changed at any time, and must be in the following format.
     // snapshot_YYYYMMDD   snapshot are built nightly.
