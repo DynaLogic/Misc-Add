@@ -1,4 +1,11 @@
 language: java
+install: gradle assemble
+script:
+  - gradle setupciworkspace
+  - gradle build
+  - gradle check
+  - cat README.md
+  - ls build/lib
 notifications:
   email:
     recipients: loganwaldman@gmail.com
