@@ -17,13 +17,20 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "2.0.1-SNAP"
+ext.config = parseConfig(file('build.properties'))
+ext.modVersion = "${config.version.mod.major}.${config.version.mod.minor}"
+
+version = "${config.version.minecraft}-${modVersion}"
 group= "com.johnsmith0508.miscadd" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "MiscAdd"
 
 minecraft {
-    version = "1.8-11.14.1.1398"
+    version = "${config.version.minecraft}-${config.version.forge}"
     runDir = "eclipse"
+    
+    replaceIn "reference/Ref.java"
+    replace "@MAJOR@", config.version.mod.major
+    replace "@MINOR@", config.version.mod.minor
     
     // the mappings can be changed at any time, and must be in the following format.
     // snapshot_YYYYMMDD   snapshot are built nightly.
